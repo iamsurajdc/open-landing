@@ -1,0 +1,73 @@
+<div class="fx-container">
+
+  <div class="flex-calc box">
+    <h3> Eligibility Calculator </h3>
+    <form action="#" class="calc-form">
+      <div class="form-field">
+        <label for="">Monthly Income</label>
+        <div class="slider-box">
+          <h1>₹ {{monthlyIncome}}</h1>
+          <input #incomeSlider name="monthlyIncome" type="range" [min]="incomeMin" [max]="incomeMax" value="100000"
+            [(ngModel)]="monthlyIncome" (ngModelChange)="monthlyIncomeChange($event)"
+            [style.background]="'linear-gradient(to right, #663399 0%, #663399 '+ incomePercent +'%, #e7daff ' + incomePercent + '%, #e7daff  100%)'">
+          <div class="fx-between">
+            <span>₹ 100000</span>
+            <span>₹ 300000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="">Monthly Expense</label>
+        <div class="slider-box">
+          <h1>₹ {{monthlyExpence}}</h1>
+          <input #expenceSlider name="monthlyExpence" type="range" [min]="expenceMin" [max]="expenceMax" value="10000"
+            [(ngModel)]="monthlyExpence" (ngModelChange)="monthlyExpenceChange($event)"
+            [style.background]="'linear-gradient(to right, #663399 0%, #663399 '+ expencePercent +'%, #e7daff ' + expencePercent + '%, #e7daff  100%)'">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="">Repayment Teure</label>
+        <div class="slider-box">
+          <select name="repaymentTeure" id="repaymentTeure">
+            <option value="3">3 Months</option>
+            <option value="6" selected>6 Months</option>
+            <option value="9">9 Months</option>
+            <option value="12">12 Months</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field fx-between">
+        <label for="">Do you have any existing loans?</label>
+        <div class="slider-box ">
+          <div class="slide-wrapper">
+            <input type="checkbox" id="test" />
+            <label for="test"></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="">EMI of existing loan (optional)</label>
+        <div class="slider-box">
+          <input type="text" name="emi" id="emi" placeholder="₹ 15000">
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <div class="fx-result box">
+    <h3>Loan Amount</h3>
+    <p>₹ 100000</p>
+    <h3>Your EMI will be</h3>
+    <p>₹ 15000</p>
+    <div class="btn-box">
+      <app-button [type]="'button'" [text]="'Get Money'" [className]="'white'"></app-button>
+    </div>
+  </div>
+
+  <img src="assets/images/accounting_dots.svg" alt="accounting_dots" class="accounting_dots">
+</div>
