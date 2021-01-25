@@ -1,0 +1,77 @@
+.feature-box {
+  position: relative;
+  padding: 20px 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.feature-bg {
+  width: 100%;
+  position: absolute;
+  bottom: -5%;
+  right: 0;
+  left: 0;
+  z-index: -999;
+}
+
+.right-container {
+  width: 30%;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.right-header {
+  font-family: "Montserrat-Medium";
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.feature-right-descrition {
+  width: 80%;
+  font-family: "Montserrat";
+  color: #777777;
+  font-size: 18px;
+  font-weight: 100;
+}
+.button-box {
+  margin-top: 70px;
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1023px) {
+  .feature-box {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .right-header {
+    font-size: 30px;
+  }
+  .feature-right-descrition {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .right-container {
+    padding: 0 1rem;
+  }
+  .feature-box {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .feature-box {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+  .right-container {
+    width: unset;
+    margin-top: 25px;
+    padding: 0 25px;
+  }
+}

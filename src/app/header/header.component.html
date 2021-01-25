@@ -1,0 +1,16 @@
+<header [class.fixed]="navFixed">
+  <nav class="fx-container">
+    <div class="fx-logo"><img src="assets/images/logo.png" alt="logo" class="logo"></div>
+    <div class="fx-menu">
+      <ul class="menu">
+        <li><a href="">Products</a></li>
+        <li><a href="">Solutions</a></li>
+        <li><a href="">Pricing</a></li>
+      </ul>
+      <div class="button-box">
+        <app-button [className]="'outlined'" [text]="'Login'" [type]="'button'"></app-button>
+        <app-button [className]="'filled'" [text]="'Get Started'" [type]="'button'"></app-button>
+      </div>
+    </div>
+  </nav>
+</header>
