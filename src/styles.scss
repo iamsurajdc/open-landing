@@ -1,0 +1,72 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(assets/fonts/OpenSans-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: OpenSanSemi;
+  src: url(assets/fonts/OpenSans-Light.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(assets/fonts/Montserrat-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url(assets/fonts/Montserrat-Medium.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url(assets/fonts/Montserrat-SemiBold.ttf) format("opentype");
+}
+
+:root {
+  --font-color: #222222;
+  --font-color-light: #505050;
+  --purple-dark: #4c2574;
+  --purple: #663399;
+}
+
+body {
+  font-family: "OpenSans";
+  letter-spacing: 0px;
+  color: var(--font-regular-color);
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.section-header {
+  font-family: "Montserrat-Medium";
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.divider {
+  margin: 34px 0;
+  height: 6px;
+  width: 120px;
+  background: #707070;
+  border-radius: 50px;
+  margin: 22px 0;
+  &.black {
+    background: #222222;
+    width: 236px;
+    margin: 5px 60px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .section-header {
+    font-size: 30px;
+  }
+}
